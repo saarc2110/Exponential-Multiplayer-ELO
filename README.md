@@ -5,7 +5,7 @@ Based on the algorithm / code presented here: http://elo-norsak.rhcloud.com/inde
 
 Based on Multiplayer ELO https://github.com/FigBug/Multiplayer-ELO (which is linear)
 
-Simple way to calculate ELO for multiplayer games. Currently only Javascript.
+Simple way to calculate ELO for multiplayer games. Currently only Javascript version. Slowly doing more.
 
 Usage:
 
