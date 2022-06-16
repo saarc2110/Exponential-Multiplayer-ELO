@@ -1,10 +1,8 @@
 # Exponential-Multiplayer-ELO
 Exponential Multiplayer ELO calculations
 
-Based on Multiplayer ELO https://github.com/FigBug/Multiplayer-ELO (which is linear)
-
 Based on the algorithm / code presented here: http://elo-norsak.rhcloud.com/index.php
-
+Based on Multiplayer ELO https://github.com/FigBug/Multiplayer-ELO (which is linear)
 
 Simple way to calculate ELO for multiplayer games. Currently only Javascript.
 
