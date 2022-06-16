@@ -33,34 +33,33 @@ class ELOMatch {
 
     calculateELOs() {
         const n = this.players.length;
-        const k = 32 / (n - 1);
+        const k = 164 / (n - 1);
 
         for (let i = 0; i < n; i++) {
             const curPlace = this.players[i].place;
             const curELO = this.players[i].eloPre;
+            let numerator = 0;
+            let den = 0;
+            const alpha = 1.25;
 
             for (let j = 0; j < n; j++) {
+                const oppPlace = this.players[j].place;
+                den += (Math.pow(alpha, n - oppPlace) - 1);
                 if (i !== j) {
-                    const oppPlace = this.players[j].place;
-                    let oppELO = this.players[j].eloPre;
-                    let s;
-                    
-                    if (curPlace < oppPlace) {
-                        s = 1;
-                    }
-                    else if (curPlace === oppPlace) {
-                        s = 0.5;
-                    }
-                    else {
-                        s = 0;
-                    }
-                    
-                    const ea = 1 / (1 + Math.pow(10, (oppELO - curELO) / 400));
-                    this.players[i].eloChange += Math.round(k * (s - ea));
+                    const oppELO = this.players[j].eloPre;
+                    numerator += 1 / (1 + Math.pow(10, (oppELO - curELO) / 400));
+
                 }
             }
+            const ea = numerator/(n*(n-1)/2);
 
-            this.players[i].eloPost = this.players[i].eloPre + this.players[i].eloChange;
+            const sa = (Math.pow(alpha, n - curPlace) - 1) / den;
+
+            const eloPost = Math.round(curELO + k*(n-1)*(sa-ea));
+
+            this.players[i].eloPost = eloPost;
+            this.players[i].eloChange = Math.round(eloPost-curELO);
+
         }
     }
 }
