@@ -33,7 +33,7 @@ class ELOMatch {
 
     calculateELOs() {
         const n = this.players.length;
-        const k = 164 / (n - 1);
+        const k = 32 / (n - 1);
 
         for (let i = 0; i < n; i++) {
             const curPlace = this.players[i].place;
