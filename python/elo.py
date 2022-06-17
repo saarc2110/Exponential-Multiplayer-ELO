@@ -60,17 +60,3 @@ class ELOMatch:
 
             player.eloPost = eloPost
             player.eloChange = round(eloPost-curELO)
-
-match = ELOMatch()
-
-match.addPlayer("Joe", 1, 1600)
-match.addPlayer("Sam", 2, 1550)
-match.addPlayer("Ted", 3, 1520)
-match.addPlayer("Rex", 4, 1439)
-
-match.calculateELOs()
-
-print(match.getELOChange("Joe"))
-print(match.getELOChange("Sam"))
-print(match.getELOChange("Ted"))
-print(match.getELOChange("Rex"))
