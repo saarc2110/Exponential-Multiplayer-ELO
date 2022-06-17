@@ -10,7 +10,7 @@ Simple way to calculate ELO for multiplayer games. Currently only Javascript ver
 Usage:
 
 ```js
-match = new ELOMatch();
+const match = new ELOMatch();
 
 match.addPlayer("Joe", 1, 1600);
 match.addPlayer("Sam", 2, 1550);
