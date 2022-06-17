@@ -1,5 +1,5 @@
 class ELOMatch {
-//
+
     constructor() {
         this.players = [];
     }
