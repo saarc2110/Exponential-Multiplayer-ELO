@@ -5,7 +5,7 @@ Based on the math presented here: https://towardsdatascience.com/developing-a-ge
 
 Based on Multiplayer ELO https://github.com/FigBug/Multiplayer-ELO (which is a linear version)
 
-Simple way to calculate ELO exponentially for multiplayer games. Currently C#, C++, Java, Javascript and Python versions. Slowly doing more.
+Simple way to calculate ELO exponentially for multiplayer games. Currently C, C#, C++, Java, Javascript and Python versions. Slowly doing more.
 
 Usage:
 
