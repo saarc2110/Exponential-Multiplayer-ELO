@@ -67,13 +67,13 @@ class ELOMatch
                 if (i != j)
                 {
                     int opponentELO   = players.get(j).eloPre;
-                    numerator += 1 / (1 + Math.Pow(10, (opponentELO - curELO) *0.0025));                     
+                    numerator += 1 / (1 + Math.pow(10, (opponentELO - curELO) *0.0025));                     
                 }
             }
             double ea = numerator/(n*(n-1)/2);
-            double sa = (Math.Pow(alpha, n - curPlace) - 1) / den;
-            int eloPost = (int)Math.Round(curELO + k*(n-1)*(sa-ea));
-            int eloChange = (int)Math.Round((double)(eloPost-curELO));
+            double sa = (Math.pow(alpha, n - curPlace) - 1) / den;
+            int eloPost = (int)Math.round(curELO + k*(n-1)*(sa-ea));
+            int eloChange = (int)Math.round((double)(eloPost-curELO));
             //add accumulated change to initial ELO for final ELO   
             players.get(i).eloPost = eloPost;
             players.get(i).eloChange = eloChange;
