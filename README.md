@@ -5,12 +5,12 @@ Based on the math presented here: https://towardsdatascience.com/developing-a-ge
 
 Based on Multiplayer ELO https://github.com/FigBug/Multiplayer-ELO (which is a linear version)
 
-Simple way to calculate ELO for multiplayer games. Currently C# and Javascript versions. Slowly doing more.
+Simple way to calculate ELO exponentially for multiplayer games. Currently C#, Java and Javascript versions. Slowly doing more.
 
 Usage:
 
-```js
-const match = new ELOMatch();
+```c#
+ELOMatch match = new ELOMatch();
 
 match.addPlayer("Joe", 1, 1600);
 match.addPlayer("Sam", 2, 1550);
