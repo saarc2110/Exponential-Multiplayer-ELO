@@ -9,8 +9,8 @@ Simple way to calculate ELO for multiplayer games. Currently C#, Java and Javasc
 
 Usage:
 
-```js
-const match = new ELOMatch();
+```c#
+ELOMatch match = new ELOMatch();
 
 match.addPlayer("Joe", 1, 1600);
 match.addPlayer("Sam", 2, 1550);
